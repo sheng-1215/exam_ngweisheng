@@ -36,4 +36,9 @@ class functionController extends Controller
             return back()->with("message","Login Failed");
         }
     }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('index');
+    }
 }
