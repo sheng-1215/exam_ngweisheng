@@ -6,7 +6,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
 class functionController extends Controller
 {
     public function register_user(Request $request){

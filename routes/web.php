@@ -17,4 +17,5 @@ Route::controller(viewController::class)->group(function(){
 Route::controller(functionController::class)->group(function(){
     Route::post('/register',"register_user")->name("register_user");
     Route::post('/login',"login_user")->name("login_user");
+    Route::post('/logout',"logout")->name("logout");
 });
