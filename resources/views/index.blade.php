@@ -14,6 +14,10 @@
             border-collapse: collapse;
             text-align: center;
         }
+        img{
+            max-width: 100px;
+            max-height: 125px;
+        }
     </style>
 </head>
 <body>
@@ -38,22 +42,21 @@
 
     <table>
         <tr>
+            <th>Image</th>
             <th>Name</th>
             <th>Price</th>
-            <th>Quantity</th>
-            <th colspan="2">Action</th>
+            <th>Mass</th>
+            <th>Action</th>
         </tr>
     @foreach ($Products as $product)
         <tr>
-            <td>{{ $product->name }}</td>
-            <td><b>Rm </b>{{ $product->price }}</td>
-            <td>{{ $product->quantity }}</td>
+            <td><img src="{{ asset("$product->img") }}" alt=""></td>
+            <td>{{ $product->p_name }}</td>
+            <td><b>Rm </b>{{ $product->p_price }}</td>
+            <td>{{ $product->p_mass }} <b>gram</b></td>
             <td>
-                <form action="">
-                    <input type="submit" value="Add To Cart">
-                </form>
+                <button type="button" onclick="location.href='{{ route('addcart',$product->id) }}'">Add to Cart</button>
             </td>
-            <td><a href="">Details</a></td>
         </tr>
     @endforeach
 </table>

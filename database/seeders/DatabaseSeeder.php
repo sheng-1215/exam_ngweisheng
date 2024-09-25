@@ -22,22 +22,22 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Products::create([
-            'name' => 'Laptop',
-            'price' => '2199.00',
-            'quantity' => '5',
-            'description' => 'This is a RTmaX30 laptop.This laptop is win 11 and Ryzen 5 7000 spec.',
+            'img' => 'img/b.jpeg',
+            'p_name' => 'Brocolli',
+            'p_price' => '5.50',
+            'p_mass' => '100',
         ]);
         Products::create([
-            'name' => 'EarPhone',
-            'price' => '899.00',
-            'quantity' => '8',
-            'description' => 'This earphone have -52db nosiy mode and have 8 mic phone.',
+            'img' => 'img/b.jpeg',
+            'p_name' => 'tomato',
+            'p_price' => '4.00',
+            'p_mass' => '100',
         ]);
         Products::create([
-            'name' => 'Gaming Mouse ',
-            'price' => '299.00',
-            'quantity' => '28',
-            'description' => 'The Mouse is new stock of Logitank.This mouse is very smooth and sensitif higher.',
+            'img' => 'img/b.jpeg',
+            'p_name' => 'Potato',
+            'p_price' => '3.00',
+            'p_mass' => '100',
         ]);
     }
 }

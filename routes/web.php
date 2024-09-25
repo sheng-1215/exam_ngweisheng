@@ -12,6 +12,7 @@ Route::controller(viewController::class)->group(function(){
     Route::get('/',"index")->name("index");
     Route::get('/register',"register")->name("register");
     Route::get('/login',"login")->name("login");
+    Route::get('/detail/{id}',"details")->name("addcart")->middleware('auth');
 });
 
 Route::controller(functionController::class)->group(function(){
