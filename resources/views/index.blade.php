@@ -26,11 +26,26 @@
             alert("{{ session('Success') }}")
         </script>
     @endsession
+
+    @session("addsuccess")
+    <script>
+        alert("{{ session('addsuccess') }}")
+    </script>
+@endsession
+
+@session("Buysuccess")
+<script>
+    alert("{{ session('Buysuccess') }}")
+</script>
+@endsession
 @auth
     <form action="{{ route('logout') }}" method="post">
         @csrf
         <input type="submit" value="Logout">
+        <button type="button" onclick="window.location.href='{{ route('cartlist') }}'">Cart</button>
+        <button type="button" onclick="window.location.href='{{ route('history') }}'">Order History</button>
     </form>
+    
 
     @else
     

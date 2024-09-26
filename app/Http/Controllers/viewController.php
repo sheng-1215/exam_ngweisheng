@@ -21,9 +21,4 @@ class viewController extends Controller
     public function login(){
         return view("login");
     }
-
-    public function details($id){
-        $details = Products::find($id);
-        return view("details",compact("details"));
-    }
 }

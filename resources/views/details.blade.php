@@ -25,7 +25,8 @@
     </style>
 </head>
 <body>
-    <form action="">
+    <form action="{{ route('addcart',$details->id) }}" method="post">
+        @csrf
         <div class="left">
             <img src="{{ asset("$details->img") }}" alt=""><br>
             <label for="p_name">Product Name : </label>
@@ -56,11 +57,8 @@
             <input type="submit" value="Buy">
         </div>
         <div class="right">
-            <label for="total_price"><b>Total Price : </b></label><br>
-            <input type="text" 
-                   name="total_price" 
-                   id="total_price"
-                   value="">
+            <h1>Total Price :</h1>
+            <h1 class="total_price" style="color: red"></h1>
         </div>
     </form>
 </body>
@@ -73,7 +71,7 @@
 
         var total = price/100*mass;
 
-        document.querySelector("input[name='total_price']").value="Rm " + total;
+        document.querySelector(".total_price").innerHTML="Rm " + total;
 
     }
 </script>

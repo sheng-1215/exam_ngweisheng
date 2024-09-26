@@ -5,12 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Products extends Model
+class cartids extends Model
 {
     use HasFactory;
-
-    protected $fillable =
-    [
-        'Trade_number'
-    ];
+    protected $fillable = ["Trade_number"];
 }
